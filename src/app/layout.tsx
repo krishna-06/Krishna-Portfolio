@@ -15,8 +15,10 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://krishna-portfolio-topaz.vercel.app";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.linkedin.com/in/krishnaaaaaa/"),
+  metadataBase: new URL(siteUrl),
   title: "Sai Krishna | Senior Full Stack .NET Developer",
   description:
     "Results-driven Senior Full Stack .NET Developer with 10 years of experience across healthcare, financial services, government, and telecom domains.",
@@ -36,9 +38,24 @@ export const metadata: Metadata = {
     title: "Sai Krishna | Senior Full Stack .NET Developer",
     description:
       "10 years building scalable enterprise applications with .NET, Angular/React, Azure, and AWS.",
-    url: "https://www.linkedin.com/in/krishnaaaaaa/",
+    url: siteUrl,
     siteName: "Sai Krishna",
     type: "website",
+    images: [
+      {
+        url: "/images/profile/profile.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Sai Krishna | Senior Full Stack .NET Developer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sai Krishna | Senior Full Stack .NET Developer",
+    description:
+      "10 years building scalable enterprise applications with .NET, Angular/React, Azure, and AWS.",
+    images: ["/images/profile/profile.jpeg"],
   },
 };
 
